@@ -8,14 +8,16 @@ import {
   clearAllTasks,
   clearCompletedTasks,
 } from "../../redux/reducers/TasksReducer/action";
+import { AiOutlinePlusCircle } from "react-icons/ai";
 
 export default function Tasks() {
   const { allTasks } = useSelector((state) => state.TasksReducer);
   const [showDeleteList, setShowDeleteList] = useState(false);
+  const [rotate, setRotate] = useState(false);
   const dispatch = useDispatch();
   return (
     <div className="all-component">
-      <FormToAddTask />
+      <FormToAddTask rotate={rotate} />
       <div className="workspace">
         <div>
           <p>
@@ -27,7 +29,11 @@ export default function Tasks() {
               <Task userTask={userTask} />
             ))}
           </div>
-          <i className="fa-solid fa-plus"></i>
+
+          <AiOutlinePlusCircle
+            className={`plus ${rotate && "rotate"}`}
+            onClick={() => setRotate(!rotate)}
+          />
         </div>
       </div>
       <span
@@ -36,12 +42,15 @@ export default function Tasks() {
       >
         <BsFillTrashFill color="gray" size={30} className="deleteIcon" />
         <div className={`typeClear ${showDeleteList && "activeDelete"} `}>
-          <p className="clear all" onClick={() => dispatch(clearAllTasks())}>
+          <p
+            className="clearList all"
+            onClick={() => dispatch(clearAllTasks())}
+          >
             All Tasks
           </p>
           <p
-            className="clear"
-            id="compClear"
+            className="clearList"
+            // id="compClear"
             onClick={() => dispatch(clearCompletedTasks())}
           >
             Completed Tasks

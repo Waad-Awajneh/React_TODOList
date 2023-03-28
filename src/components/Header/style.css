@@ -54,9 +54,9 @@ header .logo span {
     color: #8E05C2;
 }
 
-header .button {
+/* header .button {
     display: none;
-}
+} */
 
 header .nav ul {
     display: flex;
@@ -82,7 +82,7 @@ header .nav ul li:hover {
     background-color: #8E05C2;
 }
 
-.DL {
+/* .DL {
     position: absolute;
     width: 130px;
     background-color: var(--card-color);
@@ -92,9 +92,9 @@ header .nav ul li:hover {
     z-index: -50;
     transition: 0.5s;
     border-radius: 10px;
-}
+} */
 
-.drop-list {
+/* .drop-list {
     font-size: 100%;
     color: var(--font-color);
     padding: 5px 10px;
@@ -107,7 +107,7 @@ header .nav ul li:hover {
 
 .drop-list:hover {
     background-color: #9415c6;
-}
+} */
 
 .active {
     opacity: 1;
@@ -137,16 +137,17 @@ header .nav ul li:hover {
     }
 
 
-    .DL {
+    /* .DL {
         left: -15px;
         width: 100px;
-    }
+    } */
 
     .active {
         opacity: 1;
         z-index: 10;
         top: 37px;
         left: -15px;
+        border-bottom: #8E05C2;
     }
 }
 
