@@ -14,8 +14,9 @@ export const doneState = (task) => (dispatch) => {
   dispatch({ type: CONSTANTS.TASK_COMPLETED, payload: completedTask });
 };
 
-export const deleteTask = (id) => (dispatch) => {
-  const isConfirmed = deleteAlert();
+export const deleteTask = (id) => async (dispatch) => {
+  const isConfirmed = await deleteAlert();
+  console.log(isConfirmed);
   isConfirmed && dispatch({ type: CONSTANTS.DELETE_TASK, payload: id });
 };
 
