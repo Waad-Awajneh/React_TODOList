@@ -1,13 +1,142 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    /* Start Global Rules */
+    * {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    code {
+      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    a {
+      text-decoration: none;
+      color: initial;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+
+    /* Small */
+    @media (min-width: 768px) {
+      .container {
+        width: 750px;
+      }
+    }
+
+    /* Medium */
+    @media (min-width: 992px) {
+      .container {
+        width: 970px;
+      }
+    }
+
+    /* Large */
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px;
+      }
+    }
+
+    #icon {
+      position: relative;
+      right: -5px;
+      top: 0;
+      cursor: pointer;
+      width: 40px;
+      transform: scale(0.7);
+    }
+
+    @media (max-width: 767px) {
+      #icon {
+        position: absolute;
+        right: 10px;
+        top: 9px;
+      }
+    }
+
+
+
+    .light {
+      --background-color: #fff;
+      --nav-color: #fbf0ff;
+      --font-color: #000;
+      --card-color: #ab7dc6;
+      --button-color: #8E05C2;
+      --sidenav-color: #E2DBD4;
+      --navfont: #E2DBD4;
+      --complete-color: #278d27;
+      /* --image: url("../Image/13.png"); */
+      --sidenav-color: #39313C;
+
+
+    }
+
+    .dark {
+      --complete-color: #07b007;
+      --nav-color: #11001deb;
+      --background-color: #000000;
+      --sidenav-color: #271034;
+      --card-color: #432b52;
+      --font-color: #fff;
+      --button-color: #8E05C2;
+      --navfont: #FFF;
+      /* --image: url("../Image/12.jpg"); */
+      --sidenav-color: #39313C;
+
+
+    }
+
+
+    body {
+
+      background-color: var(--background-color);
+      color: var(--font-color);
+      font-family: var(--font-family) !important;
+
+    }
+
+    /* *************************************************************************************************** */
+
+    h1 {
+      font-size: 350%;
+      color: var(--font-color);
+    }
+
+    h2 {
+      font-size: 120%;
+      color: var(--font-color);
+
+    }
+
+    p {
+      font-size: 100%;
+      color: var(--font-color);
+
+    }
