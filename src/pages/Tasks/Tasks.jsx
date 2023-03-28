@@ -26,7 +26,7 @@ export default function Tasks() {
           </p>
           <div className="all-task">
             {allTasks?.map((userTask) => (
-              <Task userTask={userTask} />
+              <Task userTask={userTask} key={userTask.id} />
             ))}
           </div>
 

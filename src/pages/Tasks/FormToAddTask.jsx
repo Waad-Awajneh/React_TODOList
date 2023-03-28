@@ -27,7 +27,7 @@ export default function FormToAddTask({ rotate }) {
       <h3>Add New Task</h3>
       <form onSubmit={handelSubmit}>
         <div className="form_data">
-          <label for="Title"> Task Title </label>
+          <label htmlFor="Title"> Task Title </label>
           <input
             type="text"
             name="title"
@@ -38,7 +38,7 @@ export default function FormToAddTask({ rotate }) {
         </div>
 
         <div className="form_data">
-          <label for="Task-Priority"> Task Priority </label>
+          <label htmlFor="Task-Priority"> Task Priority </label>
           <select
             name="priority"
             onChange={handelChange}
@@ -46,14 +46,12 @@ export default function FormToAddTask({ rotate }) {
             id="Task-Priority"
           >
             <option value="Critical">Critical</option>
-            <option value="Normal" selected>
-              Normal
-            </option>
+            <option value="Normal">Normal</option>
             <option value="Low-priority">Low priority</option>
           </select>
         </div>
         <div className="form_data">
-          <label for="deadline"> DeadLine </label>
+          <label htmlFor="deadline"> DeadLine </label>
           <input
             type="date"
             onChange={handelChange}
@@ -63,7 +61,7 @@ export default function FormToAddTask({ rotate }) {
           />
         </div>
         <div className="form_data">
-          <label for="desc"> Task Description </label>
+          <label htmlFor="desc"> Task Description </label>
           <textarea
             name="description"
             id="desc"
