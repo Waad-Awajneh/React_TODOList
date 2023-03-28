@@ -14,7 +14,6 @@ function App() {
       <Routes>
         <Route to="/" index element={<Tasks />} />
       </Routes>
-
       <Footer />
     </div>
   );

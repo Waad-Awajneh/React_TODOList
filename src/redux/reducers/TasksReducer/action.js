@@ -1,6 +1,4 @@
 import * as CONSTANTS from "./constants";
-
-import Swal from "sweetalert2";
 import deleteAlert from "../../../alerts/deleteAlert";
 import AddedSuccessfullyAlert from "../../../alerts/AddedSuccessfullyAlert";
 
