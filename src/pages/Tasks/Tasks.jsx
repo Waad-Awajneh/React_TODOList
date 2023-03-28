@@ -21,7 +21,7 @@ export default function Tasks() {
       <div className="workspace">
         <div>
           <p>
-            welcome to <span id="color">Estarta Tasks Organizer</span>
+            Welcome to <span id="color">Estarta Tasks Organizer</span>
             <br /> We are thrilled to have you on board, Enjoy.
           </p>
           <div className="all-task">
