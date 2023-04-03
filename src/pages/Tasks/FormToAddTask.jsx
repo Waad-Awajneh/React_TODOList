@@ -1,8 +1,7 @@
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { addTask } from "../../redux/reducers/TasksReducer/action";
-
-export default function FormToAddTask({ rotate }) {
+function FormToAddTask({ rotate }) {
   const dispatch = useDispatch();
 
   const myRef = useRef({
@@ -78,3 +77,5 @@ export default function FormToAddTask({ rotate }) {
     </div>
   );
 }
+
+export default memo(FormToAddTask);

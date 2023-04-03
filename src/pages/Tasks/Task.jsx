@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { BsFillPenFill, BsFillTrashFill } from "react-icons/bs";
 import { useDispatch } from "react-redux";
@@ -8,7 +8,7 @@ import {
   doneState,
 } from "../../redux/reducers/TasksReducer/action";
 
-export default function Task({ userTask }) {
+function Task({ userTask }) {
   const dispatch = useDispatch();
 
   return (
@@ -40,3 +40,5 @@ export default function Task({ userTask }) {
     </div>
   );
 }
+
+export default memo(Task);
