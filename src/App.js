@@ -12,7 +12,7 @@ function App() {
     <div className={toggleValue ? "dark" : "light"}>
       <Header />
       <Routes>
-        <Route to="/" index element={<Tasks />} />
+        <Route path="/" index element={<Tasks />} />
       </Routes>
       <Footer />
     </div>

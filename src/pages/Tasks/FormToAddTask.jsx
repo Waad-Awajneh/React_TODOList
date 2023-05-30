@@ -17,8 +17,8 @@ function FormToAddTask({ rotate }) {
   };
   const handelSubmit = (e) => {
     e.preventDefault();
-
-    dispatch(addTask({ ...myRef.current, id: crypto.randomUUID() }));
+    let id = crypto.randomUUID();
+    dispatch(addTask({ ...myRef.current, id: id }));
     e.target.reset();
   };
   return (

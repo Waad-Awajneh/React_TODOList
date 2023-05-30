@@ -9,6 +9,7 @@ import {
 } from "../../redux/reducers/TasksReducer/action";
 
 function Task({ userTask }) {
+  console.log(userTask);
   const dispatch = useDispatch();
 
   return (
@@ -22,7 +23,7 @@ function Task({ userTask }) {
       </h5>
       <div className="state">
         <span className={` ${userTask.priority}`}>{userTask.priority}</span>
-        <span> {userTask.complete ? "Completed" : "UnComplete"}</span>
+        <span> {userTask.completed ? "Completed" : "UnComplete"}</span>
       </div>
 
       <span

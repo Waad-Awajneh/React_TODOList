@@ -23,11 +23,17 @@ export const saveEdit = (userTask) => (dispatch) => {
   let deadline = document.getElementById("swal-input2").value;
   let description = document.getElementById("swal-input3").value;
   let priority = document.getElementById("swal-input4").value;
-
-  userTask.title = title;
-  userTask.deadline = deadline;
-  userTask.description = description;
-  userTask.priority = priority;
+  userTask = {
+    ...userTask,
+    title: title,
+    deadline: deadline,
+    description: description,
+    priority: priority,
+  };
+  // userTask.title = title;
+  // userTask.deadline = deadline;
+  // userTask.description = description;
+  // userTask.priority = priority;
 
   dispatch({ type: CONSTANTS.UPDATE_TASK, payload: userTask });
 };

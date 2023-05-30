@@ -9,10 +9,16 @@ export const updateTaskModal = (userTask) => (dispatch) => {
       `<input type="text" id="swal-input1" class="swal2-input" value="${userTask.title}"  >` +
       `<input type="date" id="swal-input2" class="swal2-input"  value="${userTask.deadline}" >` +
       `<textarea id="swal-input3" class="swal2-input">${userTask.description}</textarea>` +
-      `<select name="Task-Priority" id="swal-input4" class="swal2-input">
-        <option value="Critical">Critical</option>
-        <option value="Normal" selected>Normal</option>
-        <option value="Low-priority">Low priority</option>
+      `<select name="Task-Priority" id="swal-input4"  class="swal2-input">
+        <option value="Critical" ${
+          userTask.priority == "Critical" && " selected"
+        } >Critical</option>
+        <option value="Normal"   ${
+          userTask.priority == "Normal" && " selected"
+        }  >Normal</option>
+        <option value="Low-priority"  ${
+          userTask.priority == "Low-priority" && " selected"
+        } >Low priority</option>
       </select>`,
     focusConfirm: false,
     preConfirm: () => {
